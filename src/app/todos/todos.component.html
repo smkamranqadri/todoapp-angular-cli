@@ -1,0 +1,9 @@
+<h1>Todos</h1>
+
+<input type="text" name="todo" id="todo" #todo value="">
+<button (click)="addTodo(todo)" *ngIf="!currentTodoIndex">Add</button>
+<button (click)="updateTodo(todo)" *ngIf="currentTodoIndex">Update</button>
+
+<ul>
+  <todo [task]="todo" [index]="i" (edit)="editTodo($event)" (delete)="deleteTodo($event)" *ngFor="let todo of todos; let i = index;"></todo>
+</ul>
