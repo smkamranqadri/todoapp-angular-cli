@@ -4,8 +4,8 @@
     <div class="form-group">
       <input class="form-control" type="text" name="todo" id="todo" [(ngModel)]="todo" value="">
     </div>
-    <button class="btn btn-default" (click)="addTodo()" *ngIf="!showUpdate">Add  {{currentTodoIndex}}</button>
-    <button class="btn btn-default" (click)="updateTodo()" *ngIf="showUpdate">Update {{currentTodoIndex}}</button>
+    <button class="btn btn-default" (click)="addTodo()" *ngIf="!showUpdate">Add</button>
+    <button class="btn btn-default" (click)="updateTodo()" *ngIf="showUpdate">Update</button>
   </div>
 </div>
 <app-todo *ngFor="let todo of todos; let i = index;" [task]="todo" [index]="i" (edit)="editTodo($event)" (delete)="deleteTodo($event)"></app-todo>
