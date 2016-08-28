@@ -1,12 +1,11 @@
-<h1>Todos</h1>
-<div>
-
-  <input type="text" name="todo" id="todo" #t value="">
-  <button (click)="addTodo(t)" *ngIf="!currentTodoIndex">Add</button>
-  <button (click)="updateTodo(t)" *ngIf="currentTodoIndex">Update</button>
-
-  <ul>
-    <app-todo *ngFor="let todo of todos; let i = index;" [task]="todo" [index]="i" (edit)="editTodo($event)" (delete)="deleteTodo($event)"></app-todo>
-  </ul>
-
+<h1 class="text-center">Todos</h1>
+<div class="panel panel-warning">
+  <div class="panel-body">
+    <div class="form-group">
+      <input class="form-control" type="text" name="todo" id="todo" [(ngModel)]="todo" value="">
+    </div>
+    <button class="btn btn-default" (click)="addTodo()" *ngIf="!showUpdate">Add  {{currentTodoIndex}}</button>
+    <button class="btn btn-default" (click)="updateTodo()" *ngIf="showUpdate">Update {{currentTodoIndex}}</button>
+  </div>
 </div>
+<app-todo *ngFor="let todo of todos; let i = index;" [task]="todo" [index]="i" (edit)="editTodo($event)" (delete)="deleteTodo($event)"></app-todo>

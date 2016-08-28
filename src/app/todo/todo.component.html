@@ -1,6 +1,10 @@
-<li>
-  {{task}}
-  <button (click)="editTodo(index)">Edit</button>
-  <!--<button (click)="deleteTodo(task)">Delete</button>  -->
-  <button (click)="deleteTodo(index)">Delete</button>
-</li>
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h4>{{task}}</h4>
+  </div>
+  <div class="panel-body">
+    <button class="btn btn-warning" (click)="editTodo(index)">Edit</button>
+    <!--<button (click)="deleteTodo(task)">Delete</button>  -->
+    <button class="btn btn-danger pull-right" (click)="deleteTodo(index)">Delete</button>
+  </div>
+</div>

@@ -1,5 +1,9 @@
-#Angular 2 - Todo App with Angular ClI
+# Angular 2 - Todo App with Angular ClI
 
-Todo app with simple child and parent communication pattern.
+### Todo app with simple child and parent communication pattern.
 
-29th Aug'16 - Updated to angular-cli@webpack
+### Included 3rd Party Library usage.
+
+### Included Sass styles usage.
+
+#### 29th Aug'16 - Updated to angular-cli@webpack

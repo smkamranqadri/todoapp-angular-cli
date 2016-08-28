@@ -3,32 +3,36 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-todos',
   templateUrl: 'todos.component.html',
-  styleUrls: ['todos.component.css']
+  styleUrls: ['todos.component.scss']
 })
 export class TodosComponent implements OnInit {
 
-  todos: Array<string> = [];
+  todos: Array<string> = ['Test'];
+  todo: string;
   currentTodoIndex: number = null;
+  showUpdate: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  addTodo(todo: HTMLInputElement) {
-    this.todos.push(todo.value);
-    todo.value = '';
+  addTodo() {
+    this.todos.push(this.todo);
+    this.todo = '';
   }
 
   editTodo(index: number) {
     this.currentTodoIndex = index;
-    let todoElement: HTMLInputElement = <HTMLInputElement>document.getElementById('todo');
-    todoElement.value = this.todos[index];
+    this.showUpdate = true;
+    this.todo = this.todos[index];
   }
 
-  updateTodo(todo: HTMLInputElement) {
-    this.todos[this.currentTodoIndex] = todo.value;
-    todo.value = '';
+  updateTodo() {
+    this.todos[this.currentTodoIndex] = this.todo;
+    this.currentTodoIndex = null;
+    this.showUpdate = false;
+    this.todo = '';
   }
 
   // deleteTodo(todo: string) {
