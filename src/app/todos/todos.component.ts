@@ -1,22 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TodoComponent } from '../todo';
-
 @Component({
-  moduleId: module.id,
-  selector: 'todos',
+  selector: 'app-todos',
   templateUrl: 'todos.component.html',
-  styleUrls: ['todos.component.css'],
-  directives: [TodoComponent]
+  styleUrls: ['todos.component.css']
 })
 export class TodosComponent implements OnInit {
 
   todos: Array<string> = [];
   currentTodoIndex: number = null;
 
-  constructor() {
-
-  }
+  constructor() { }
 
   ngOnInit() {
   }

@@ -1,8 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  moduleId: module.id,
-  selector: 'todo',
+  selector: 'app-todo',
   templateUrl: 'todo.component.html',
   styleUrls: ['todo.component.css']
 })
@@ -13,7 +12,6 @@ export class TodoComponent implements OnInit {
   @Output('edit') editTodoEventEmitter: EventEmitter<number> = new EventEmitter();
   // @Output('delete') deleteTodoEventEmitter: EventEmitter<string> = new EventEmitter();
   @Output('delete') deleteTodoEventEmitter: EventEmitter<number> = new EventEmitter();
-
 
   constructor() { }
 
