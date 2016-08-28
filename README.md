@@ -2,6 +2,8 @@
 
 ### Todo app with simple child and parent communication pattern.
 
+### Live View at [https://smkamranqadri.github.io/todoapp-angular-cli/](https://smkamranqadri.github.io/todoapp-angular-cli/)
+
 ### Included 3rd Party Library usage.
 
 ### Included Sass styles usage.
